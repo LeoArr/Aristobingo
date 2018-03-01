@@ -45,8 +45,6 @@ function load_new() {
         lucka.classList.add("lucka_stängd");
         number.classList.add("lucka_number");
         number.innerText = i + 1;
-        if ((i % 5) == 0)
-            lucka.style.clear = "left";
         lucka.appendChild(number);
         luckor.appendChild(lucka);
         lucka.onclick = function(event) {
