@@ -18,7 +18,8 @@ function setup_popup() {
 
 function set_popup_content(i) {
     var cont = document.getElementById("lucka_container");
-    var res ="";
+    console.log(i);
+    var res = "";
     switch(i) {
         case '1':
             res = "ABSINT";
@@ -30,7 +31,7 @@ function set_popup_content(i) {
             res = "EN FUCK ME UP!"
             break;
         default:
-            res = "404";
+            res = "<404>";
     }
     cont.innerText = res;
 }
