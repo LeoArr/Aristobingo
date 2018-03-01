@@ -20,14 +20,14 @@ function set_popup_content(i) {
     var cont = document.getElementById("lucka_container");
     console.log(i);
     var res = "";
-    switch(i) {
-        case '1':
+    switch(parseInt(i)) {
+        case 1:
             res = "ABSINT";
             break;
-        case '2':
+        case 2:
             res = "ARISTO-POD";
             break;
-        case '3':
+        case 3:
             res = "EN FUCK ME UP!"
             break;
         default:
