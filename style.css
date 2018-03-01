@@ -11,8 +11,7 @@ body {
     grid-row-gap: 10px;
 }
 
-.lucka_stängd {
-    background-color: rgb(220, 0, 200);
+.lucka_stängd, .lucka_öppnad {
     border: 10px solid rgb(100, 200, 220);
     width: 15%;
     padding: 50px;
@@ -22,6 +21,14 @@ body {
     color: yellow;
     font-style: oblique;
     font-family: helvetica;
+}
+
+.lucka_stängd {
+    background-color: rgb(220, 0, 200);
+}
+
+.lucka, .lucka_öppnad {
+    background-color: rgb(100, 0, 100);
 }
 
 .lucka_stängd:hover {

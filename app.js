@@ -2,6 +2,7 @@
 
 window.onload = load_new;
 
+//init the modal popup window
 function setup_popup() {
     var popup = document.getElementById("lucka_popup");
     var popupclose = document.getElementById("closeModal");
@@ -16,9 +17,9 @@ function setup_popup() {
     return popup;
 }
 
+//adds content to the popup when lucka is clicked
 function set_popup_content(i) {
     var cont = document.getElementById("lucka_container");
-    console.log(i);
     var res = "";
     switch(parseInt(i)) {
         case 1:
@@ -36,6 +37,7 @@ function set_popup_content(i) {
     cont.innerText = res;
 }
 
+//run on load. init allt
 function load_new() {
     var popup = setup_popup();
     var luckor = document.getElementById('goa_luckor_container');
@@ -49,6 +51,7 @@ function load_new() {
         luckor.appendChild(lucka);
         lucka.onclick = function(event) {
             popup.style.display = "block";
+            event.target.classList.replace("lucka_stängd", "lucka_öppnad");
             set_popup_content(event.target.innerText);
         }
     }
