@@ -1,5 +1,6 @@
 "use strict";
-var lotto = '<iframe width="560" height="315" src="https://www.youtube.com/embed/m19ZYMJIK8I?rel=0&amp;controls=0&amp;showinfo=0&amp;start=2&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+var lotto = ['<iframe width="560" height="315" src="https://www.youtube.com/embed/m19ZYMJIK8I?rel=0&amp;controls=0&amp;showinfo=0&amp;start=2&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/mfPhqk8Gtd4?rel=0&amp;controls=0&amp;showinfo=0&amp;start=5&autoplay=1&end=15" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>']
 var vinster = [
     'SHOT',
     'ARISTO-POD',
@@ -37,7 +38,7 @@ function set_popup_content(i) {
     p.innerText = res;
     vinster.splice(lucka, 1);
     cont.appendChild(p);
-    cont.innerHTML += lotto;
+    cont.innerHTML += lotto[Math.floor(Math.random() * lotto.length)];
 
 }
 
