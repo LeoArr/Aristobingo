@@ -3,19 +3,21 @@ body {
 }
 
 #goa_luckor_container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-row-gap: 10px;
 }
 
+#logga {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 .lucka_stängd, .lucka_öppnad {
     border: 10px solid rgb(100, 200, 220);
-    width: 15%;
-    padding: 50px;
-    padding-top: 15%; /* 1:1 Aspect Ratio */
+    height: 100%;
     border-radius: 7px;
     transition: 0.35s;
     color: yellow;
@@ -58,7 +60,7 @@ body {
 /* Modal Content/Box */
 .modalContent {
     background-color: rgb(220, 0, 220);
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
     color: yellow;
     font-family: helvetica;

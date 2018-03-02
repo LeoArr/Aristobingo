@@ -1,4 +1,13 @@
 "use strict";
+var lotto = '<iframe width="560" height="315" src="https://www.youtube.com/embed/m19ZYMJIK8I?rel=0&amp;controls=0&amp;showinfo=0&amp;start=2&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+var vinster = [
+    'SHOT',
+    'ARISTO-POD',
+    'EN FUCK ME UP!',
+    'ÄGG!',
+    'PLÖTSLIG DÖD',
+    'ETT TILL FRIKORT I DIN NÄSTA RELATION'
+];
 
 window.onload = load_new;
 
@@ -8,33 +17,28 @@ function setup_popup() {
     var popupclose = document.getElementById("closeModal");
     popupclose.onclick = function() {
         popup.style.display = "none";
+        document.getElementById("lucka_container").innerHTML = "";
     }
     window.onclick = function(event) {
         if (event.target == popup) {
             popup.style.display = "none";
+            document.getElementById("lucka_container").innerHTML = "";
         }
     }
     return popup;
 }
 
-//adds content to the popup when lucka is clicked
+//adds content to the popup when the lucka is clicked
 function set_popup_content(i) {
     var cont = document.getElementById("lucka_container");
-    var res = "";
-    switch(parseInt(i)) {
-        case 1:
-            res = "ABSINT";
-            break;
-        case 2:
-            res = "ARISTO-POD";
-            break;
-        case 3:
-            res = "EN FUCK ME UP!"
-            break;
-        default:
-            res = "<404>";
-    }
-    cont.innerText = res;
+    var lucka = Math.floor(Math.random() * vinster.length);
+    var res = vinster[lucka];
+    var p = document.createElement('p');
+    p.innerText = res;
+    vinster.splice(lucka, 1);
+    cont.appendChild(p);
+    cont.innerHTML += lotto;
+
 }
 
 //run on load. init allt
