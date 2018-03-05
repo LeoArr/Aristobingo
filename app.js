@@ -1,13 +1,37 @@
 "use strict";
+
 var lotto = ['<iframe width="560" height="315" src="https://www.youtube.com/embed/m19ZYMJIK8I?rel=0&amp;controls=0&amp;showinfo=0&amp;start=2&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/mfPhqk8Gtd4?rel=0&amp;controls=0&amp;showinfo=0&amp;start=5&autoplay=1&end=15" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>']
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/mfPhqk8Gtd4?rel=0&amp;controls=0&amp;showinfo=0&amp;start=5&autoplay=1&end=15" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+          '<iframe width="560" height="315" src="https://www.youtube.com/embed/P_5-OSVYyis?rel=0&amp;controls=0&amp;showinfo=0&amp:start=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+        '<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FLeifOlssonFanClub%2Fvideos%2F1980499622213480%2F&show_text=0&width=560&mute=0&autoplay=1" width="560" height="315" style="border:none;overflow:hidden"allow="autoplay scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>',
+      '<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FLeifOlssonFanClub%2Fvideos%2F1950731018523674%2F&show_text=0&width=560&mute=0&autoplay=1" width="560" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>']
+
 var vinster = [
-    'SHOT',
-    'ARISTO-POD',
-    'EN FUCK ME UP!',
+    'SHOT!',
+    'TVÄTTMEDEL!',
     'ÄGG!',
     'PLÖTSLIG DÖD',
-    'ETT TILL FRIKORT I DIN NÄSTA RELATION'
+    'ETT TILL FRIKORT I DIN NÄSTA RELATION',
+    'MUSIKFRÅGA!',
+    'FINSKA PIROGER!',
+    'DAGENS DUBBEL!',
+    'FÄRGFEMMAN!',
+    'KAFFE!',
+    'GÅTA!',
+    "2760!",
+    "PATET-LUCKAN!",
+    "TRYKK-LUCKAN!",
+    "KATTMAT!",
+    "BLINDBÖCK!",
+    "INSERT TEXT HERE!",
+    "FÖRR VS SNART!",
+    "FÖRSTEN SOM STÄLLER SIG UPP FÅR EN SHOT!",
+    "DÖMD-FRÅGA!",
+    "CHARIZADER!",
+    "PICTIONARY!",
+    "FLIP CUP!",
+    "CAPS!",
+    "AVSLUTA MENINGEN!"
 ];
 
 window.onload = load_new;
@@ -55,8 +79,10 @@ function load_new() {
         lucka.appendChild(number);
         luckor.appendChild(lucka);
         lucka.onclick = function(event) {
-            popup.style.display = "block";
+            console.log(event);
+            event.target.parentNode.classList.replace("lucka_stängd", "lucka_öppnad");
             event.target.classList.replace("lucka_stängd", "lucka_öppnad");
+            popup.style.display = "block";
             set_popup_content(event.target.innerText);
         }
     }
