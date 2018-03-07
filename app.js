@@ -82,6 +82,7 @@ function load_new() {
             console.log(event);
             event.target.parentNode.classList.replace("lucka_stängd", "lucka_öppnad");
             event.target.classList.replace("lucka_stängd", "lucka_öppnad");
+            this.onclick = "";
             popup.style.display = "block";
             set_popup_content(event.target.innerText);
         }
